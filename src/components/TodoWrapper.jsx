@@ -20,19 +20,19 @@ export const TodoWrapper = () => {
  const deleteToDo = id =>{
     setToDo(toDos.filter(toDo => toDo.id !== id))
  }
-
-
-
-
+ const deleteAll = () =>{
+    setToDo([])
+} 
 
     return (
         <div className='TodoWrapper'>
             <h1>Cosas para hacer!</h1>
             
-            <TodoForm addToDo={addToDo} deleteAll={deleteAll} />
+            <TodoForm addToDo={addToDo} setToDo={setToDo}/>
             {toDos.map((toDo, index)=>(
                 <Todo task= {toDo} key={index} toggleComplete={toggleComplete} deleteToDo={deleteToDo}/>
             ))}
+            <button onClick={deleteAll} className='dltBtn'>Borrar todo</button>
         </div>
     )
 }

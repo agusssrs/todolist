@@ -2,7 +2,6 @@
 
 * {
   font-family: 'SteamflixSans', sans-serif;
-  /* font-family: 'SteamflixSansBold', sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -45,6 +44,8 @@ h1 {
   margin-bottom: 2rem;
   width: 300px;
   color: #fff;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 .TodoInput::placeholder {
@@ -55,10 +56,11 @@ h1 {
   background: #6844c5;
   color: #fff;
   border: solid 3px white;
-  border-radius: 0.36rem;
-  padding: 0.55rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
   cursor: pointer;
-  
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
 }
 
 .ToDo {
@@ -80,4 +82,13 @@ h1 {
 .completed {
   color: #4800ff;
   text-decoration: line-through;
+}
+
+.dltBtn{
+  background: #6844c5;
+  color: #fff;
+  border: solid 3px white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
